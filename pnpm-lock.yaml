@@ -25,9 +25,6 @@ importers:
       pathe:
         specifier: ^1.1.2
         version: 1.1.2
-      rollup:
-        specifier: ^4.18.0
-        version: 4.18.0
       ufo:
         specifier: ^1.5.3
         version: 1.5.3
@@ -71,6 +68,12 @@ importers:
       playwright:
         specifier: 1.44.1
         version: 1.44.1
+      rollup:
+        specifier: ^4.18.0
+        version: 4.18.0
+      simple-git-hooks:
+        specifier: ^2.11.1
+        version: 2.11.1
       typescript:
         specifier: 5.4.5
         version: 5.4.5
@@ -4084,6 +4087,10 @@ packages:
   sigstore@2.2.0:
     resolution: {integrity: sha512-fcU9clHwEss2/M/11FFM8Jwc4PjBgbhXoNskoK5guoK0qGQBSeUbQZRJ+B2fDFIvhyf0gqCaPrel9mszbhAxug==}
     engines: {node: ^16.14.0 || >=18.0.0}
+
+  simple-git-hooks@2.11.1:
+    resolution: {integrity: sha512-tgqwPUMDcNDhuf1Xf6KTUsyeqGdgKMhzaH4PAZZuzguOgTl5uuyeYe/8mWgAr6IBxB5V06uqEf6Dy37gIWDtDg==}
+    hasBin: true
 
   simple-git@3.25.0:
     resolution: {integrity: sha512-KIY5sBnzc4yEcJXW7Tdv4viEz8KyG+nU0hay+DWZasvdFOYKeUZ6Xc25LUHHjw0tinPT7O1eY6pzX7pRT1K8rw==}
@@ -9562,6 +9569,8 @@ snapshots:
       '@sigstore/verify': 0.1.0
     transitivePeerDependencies:
       - supports-color
+
+  simple-git-hooks@2.11.1: {}
 
   simple-git@3.25.0:
     dependencies:
