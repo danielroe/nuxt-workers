@@ -1,0 +1,91 @@
+{
+  "name": "nuxt-workers",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Easily run code in web workers in Nuxt.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielroe/nuxt-workers.git"
+  },
+  "keywords": [
+    "nuxt",
+    "module",
+    "nuxt-module",
+    "web-workers",
+    "performance"
+  ],
+  "author": {
+    "name": "Daniel Roe <daniel@roe.dev>",
+    "url": "https://github.com/danielroe"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm dev:prepare && nuxt-module-build build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "pnpm nuxt-module-build build --stub && pnpm nuxt-module-build prepare && nuxi prepare playground",
+    "docs:dev": "nuxi dev docs",
+    "docs:build": "nuxi generate docs",
+    "lint": "eslint .",
+    "prepack": "pnpm build",
+    "prepare": "husky install",
+    "prepublishOnly": "pnpm lint && pnpm test",
+    "release": "bumpp && pnpm publish",
+    "test": "vitest run",
+    "test:types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.12.2",
+    "magic-string": "^0.30.10",
+    "mlly": "^1.7.1",
+    "pathe": "^1.1.2",
+    "ufo": "^1.5.3",
+    "unplugin": "^1.10.1"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "0.3.13",
+    "@nuxt/module-builder": "0.8.0",
+    "@nuxt/schema": "3.12.2",
+    "@nuxt/test-utils": "3.13.1",
+    "@vitest/coverage-v8": "1.6.0",
+    "@vue/test-utils": "2.4.6",
+    "bumpp": "9.4.1",
+    "eslint": "9.5.0",
+    "happy-dom": "14.12.0",
+    "lint-staged": "15.2.7",
+    "nuxt": "3.12.2",
+    "playwright": "1.44.1",
+    "rollup": "^4.18.0",
+    "typescript": "5.4.5",
+    "vite": "5.3.1",
+    "vitest": "1.6.0",
+    "vitest-environment-nuxt": "1.0.0",
+    "vue": "3.4.29"
+  },
+  "resolutions": {
+    "@nuxt/kit": "3.12.2",
+    "@nuxt/schema": "3.12.2",
+    "nuxt-workers": "link:."
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,mjs,cjs,json,.*rc}": [
+      "pnpm eslint --fix"
+    ]
+  },
+  "packageManager": "pnpm@9.4.0"
+}
