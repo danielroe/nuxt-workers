@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs'
-import { defineNuxtModule, resolveFiles, updateTemplates, resolveAlias, addBuildPlugin, addVitePlugin } from '@nuxt/kit'
+import { defineNuxtModule, resolveFiles, updateTemplates, resolveAlias, addBuildPlugin } from '@nuxt/kit'
 import { findExportNames } from 'mlly'
 import { join, relative, resolve } from 'pathe'
 import { withQuery } from 'ufo'
@@ -50,7 +50,8 @@ export default defineNuxtModule<ModuleOptions>({
     const transformPlugin = WorkerTransformPlugin({ mode: 'client', sourcemap: !!nuxt.options.sourcemap.client, context })
     if (nuxt.options.dev) {
       addBuildPlugin(transformPlugin, { server: false })
-    } else {
+    }
+    else {
       nuxt.hook('vite:extendConfig', (config, { isClient }) => {
         if (isClient) {
           const plugins = (config.build!.rollupOptions!.plugins ||= []) as InputPluginOption[]
@@ -58,7 +59,6 @@ export default defineNuxtModule<ModuleOptions>({
         }
       })
     }
-
 
     const typesDir = join(nuxt.options.buildDir, 'types')
     nuxt.options.build.templates.unshift({
