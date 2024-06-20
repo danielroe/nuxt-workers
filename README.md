@@ -41,7 +41,7 @@ export function hi() {
 }
 ```
 
-Then, call it in the rest of your Vue app:
+Then, call it in the rest of your Vue app.
 
 ```vue
 <script setup lang="ts">
@@ -54,6 +54,9 @@ const message = await hi()
   </div>
 </template>
 ```
+
+> [!TIP]
+> Even if your function is synchronous, it will always become async when it is called within a worker because communication with a worker will always be asynchronous.
 
 ## Roadmap
 
