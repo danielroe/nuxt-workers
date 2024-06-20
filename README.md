@@ -60,6 +60,7 @@ const message = await hi()
 - [ ] 📖 basic documentation
 - [ ] 🧪 fuller testing
 - [ ] 📦 webpack support
+- [ ] ⚠️ type-level + dev warning if non serialisable args are passed
 - [ ] 🤝 automatic shared workers with `.shared.ts` suffix
 - [ ] 💤 worker auto-shutdown
 
