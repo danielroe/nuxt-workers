@@ -57,8 +57,8 @@ const message = await hi()
 
 ## Roadmap
 
-- [ ] 📖 basic documentation
-- [ ] 🧪 fuller testing
+- [x] 📖 basic documentation
+- [x] 🧪 client-side test
 - [ ] 📦 webpack support
 - [ ] ⚠️ type-level + dev warning if non serialisable args are passed
 - [ ] 🤝 automatic shared workers with `.shared.ts` suffix
