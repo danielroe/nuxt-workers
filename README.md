@@ -5,7 +5,9 @@
 [![Github Actions][github-actions-src]][github-actions-href]
 [![Codecov][codecov-src]][codecov-href]
 
-> SSR-safe, zero-config Web Workers integration for [Nuxt](https://nuxt.com)
+SSR-safe, zero-config Web Workers integration for [Nuxt](https://nuxt.com).
+
+> Web Workers enable running JavaScript code in the background to perform complex tasks without blocking the main thread, ensuring smoother and more responsive web applications.
 
 - [✨ &nbsp;Changelog](https://github.com/danielroe/nuxt-workers/blob/main/CHANGELOG.md)
 - [▶️ &nbsp;Online playground](https://stackblitz.com/github/danielroe/nuxt-workers/tree/main/playground)
@@ -16,13 +18,7 @@
 - ✨ auto-imported, zero-configuration
 - 💪 fully typed
 
-## Roadmap
-
-- [ ] basic documentation
-- [ ] fuller test
-- [ ] webpack support
-
-## Installation
+## Quick Setup
 
 Install and add `nuxt-workers` to your `nuxt.config`.
 
@@ -30,11 +26,38 @@ Install and add `nuxt-workers` to your `nuxt.config`.
 npx nuxi@latest module add nuxt-workers
 ```
 
-```js
-export default defineNuxtConfig({
-  modules: ['nuxt-workers'],
-})
+That's it! You can add web workers in your Nuxt app ✨
+
+## Usage
+
+Create your web worker in the `~/workers/` directory:
+
+```ts
+// workers/hi.ts
+export function hi() {
+  return 'Hello from web worker!'
+}
 ```
+
+Then, call it in your pages & components:
+
+```vue
+<script setup lang="ts">
+const message = await hi()
+</script>
+
+<template>
+  <div>
+    {{ message }}
+  </div>
+</template>
+```
+
+## Roadmap
+
+- [ ] basic documentation
+- [ ] fuller test
+- [ ] webpack support
 
 ## 💻 Development
 
