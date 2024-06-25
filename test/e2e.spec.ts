@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'node:url'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { setup, $fetch, createPage, url } from '@nuxt/test-utils/e2e'
 
 await setup({
@@ -29,13 +29,15 @@ describe('nuxt-workers', () => {
 
   it('should automatically shut down the worker after 1 second of inactivity', async () => {
     const page = await createPage()
+    const logs: string[] = []
+    page.on('console', (l) => {
+      logs.push(l.text())
+    })
     await page.goto(url('/'))
     await page.getByText('Load client side message').click()
-    await new Promise(resolve => setTimeout(resolve, 1500)) // wait for more than 1 second to ensure worker shutdown
-    const logs = await page.evaluate(() => console.log.mock.calls)
-    expect(logs).toContainEqual(expect.stringContaining('Worker terminated due to inactivity.'))
+    // wait for more than 1 second to ensure worker shutdown
+    await new Promise(resolve => setTimeout(resolve, 1500))
+    expect(logs).toContainEqual(expect.stringContaining('Worker hi terminated due to inactivity.'))
     await page.close()
   })
 })
-
-vi.spyOn(console, 'log').mockImplementation(() => {})
