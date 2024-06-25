@@ -62,6 +62,8 @@ const message = await hi()
 
 - [x] 📖 basic documentation
 - [x] 🧪 client-side test
+- [ ] 🧱 `useNuxtWorker` composable for more fine-grained control
+- [ ] ⚗️ automatic deduplicating on client-side
 - [ ] 📦 webpack support
 - [ ] ⚠️ type-level + dev warning if non serialisable args are passed
 - [ ] 🤝 automatic shared workers with `.shared.ts` suffix
