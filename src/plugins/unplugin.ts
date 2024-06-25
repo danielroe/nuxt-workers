@@ -85,6 +85,7 @@ export const WorkerPlugin = (opts: WorkerPluginOptions) => createUnplugin(() => 
         source += `
 const counts = {}
 const map = {}
+const workerTimeouts = {}
 
 function initWorker (worker, name) {
   map[name] = {}
@@ -96,7 +97,20 @@ function initWorker (worker, name) {
     } else {
       resolve(e.data.result)
     }
+    // Reset the inactivity timer upon receiving a message
+    clearTimeout(workerTimeouts[name]);
+    workerTimeouts[name] = setTimeout(() => {
+      worker.terminate();
+      delete workerTimeouts[name];
+      console.log(\`Worker \${name} terminated due to inactivity.\`);
+    }, 1000); // 1 second of inactivity
   }
+  // Initialize the inactivity timer
+  workerTimeouts[name] = setTimeout(() => {
+    worker.terminate();
+    delete workerTimeouts[name];
+    console.log(\`Worker \${name} terminated due to inactivity.\`);
+  }, 1000); // 1 second of inactivity
   return worker
 }`
       }

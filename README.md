@@ -19,6 +19,7 @@ SSR-safe, zero-config Web Workers integration for [Nuxt](https://nuxt.com).
 - 🔥 SSR-safe usage of Web Workers
 - ✨ auto-imported, zero-configuration
 - 💪 fully typed
+- 🕒 Automatic shutdown of workers after 1 second of inactivity
 
 ## Quick Setup
 
@@ -58,6 +59,10 @@ const message = await hi()
 > [!TIP]
 > Even if your function is synchronous, it will always become async when it is called within a worker because communication with a worker will always be asynchronous.
 
+### Worker Auto-Shutdown
+
+The module automatically shuts down workers after 1 second of inactivity to free up resources. This behavior ensures that your application remains efficient and responsive, without unnecessary resource consumption by idle workers.
+
 ## Roadmap
 
 - [x] 📖 basic documentation
@@ -65,7 +70,7 @@ const message = await hi()
 - [ ] 📦 webpack support
 - [ ] ⚠️ type-level + dev warning if non serialisable args are passed
 - [ ] 🤝 automatic shared workers with `.shared.ts` suffix
-- [ ] 💤 worker auto-shutdown
+- [x] 💤 worker auto-shutdown
 
 ## 💻 Development
 
