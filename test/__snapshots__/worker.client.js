@@ -1,5 +1,5 @@
-const bob = () => 42; const foo = () => "thing"
-const __worker_exports__ = { bob: bob }
+const foo = () => 42; const bar = async () => "thing"; const baz = function () { }
+const __worker_exports__ = { foo: foo, bar: bar }
 self.onmessage = async (e) => {
   const { name, args, id } = e.data
   const fn = __worker_exports__[name]

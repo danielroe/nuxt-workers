@@ -1,12 +1,12 @@
 
-const counts = {}
 const map = {}
+let count = 0
+let _nuxt_worker
 
-function initWorker (worker, name) {
-  map[name] = {}
-  counts[name] = 0
+function initWorker (worker) {
+  const worker = new Worker(new URL("somefile.ts", import.meta.url))
   worker.onmessage = (e) => {
-    const [resolve, reject] = map[name][e.data.id]
+    const [resolve, reject] = map[e.data.id]
     if ('error' in e.data) {
       reject(new Error(e.data.error))
     } else {
@@ -15,16 +15,23 @@ function initWorker (worker, name) {
   }
   return worker
 }
-var _nuxt_worker_bob;
-async function bob (...args) {
 
-  _nuxt_worker_bob ||= initWorker(new Worker(new URL("somefile.ts", import.meta.url)), "bob")
+export async function foo (...args) {
+  _nuxt_worker ||= initWorker()
 
-  const id = counts["bob"]++
+  const id = count++
   return new Promise((resolve, reject) => {
-    map["bob"][id] = [resolve, reject]
-    _nuxt_worker_bob.postMessage({ name: "bob", args, id })
+    map[id] = [resolve, reject]
+    _nuxt_worker.postMessage({ name: "foo", args, id })
   })
 }
 
-export { bob }
+export async function bar (...args) {
+  _nuxt_worker ||= initWorker()
+
+  const id = count++
+  return new Promise((resolve, reject) => {
+    map[id] = [resolve, reject]
+    _nuxt_worker.postMessage({ name: "bar", args, id })
+  })
+}

@@ -3,23 +3,16 @@ import { describe, it, expect } from 'vitest'
 import { WorkerTransformPlugin, WorkerPlugin, VIRTUAL_ID } from '../src/plugins/unplugin.js'
 
 describe('worker transform', () => {
+  const workerSource = 'export const foo = () => 42; export const bar = async () => "thing"; export const baz = function () { }'
   it('should not transform code on the server', async () => {
-    const code = await transform('server', 'export const bob = () => 42; export const foo = () => "thing"')
+    const code = await transform('server', workerSource)
     expect(code).toBeUndefined()
   })
   it('should transform code on the client', async () => {
-    const code = await transform('client', 'export const bob = () => 42; export const foo = () => "thing"')
+    const code = await transform('client', workerSource)
     expect(code).toMatchFileSnapshot('__snapshots__/worker.client.js')
   })
 })
-
-async function transform(mode: 'server' | 'client', code: string) {
-  const context = { workerExports: {}, reverseMap: { 'somefile.ts': ['bob'] } }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const plugin = WorkerTransformPlugin({ mode, context }).raw({}, {} as any)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (plugin as any).transform(code, 'somefile.ts')?.code
-}
 
 describe('worker loader', () => {
   it('should load worker on server', async () => {
@@ -32,8 +25,18 @@ describe('worker loader', () => {
   })
 })
 
+// Helper utils
+
+const context = { workerExports: { foo: 'somefile.ts', bar: 'somefile.ts' }, reverseMap: { 'somefile.ts': ['foo', 'bar'] } }
+
+async function transform(mode: 'server' | 'client', code: string) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const plugin = WorkerTransformPlugin({ mode, context }).raw({}, {} as any)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (plugin as any).transform(code, 'somefile.ts')?.code
+}
+
 async function load(mode: 'server' | 'client') {
-  const context = { workerExports: { bob: 'somefile.ts' }, reverseMap: { 'somefile.ts': ['bob'] } }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const plugin = WorkerPlugin({ mode, context }).raw({}, {} as any)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

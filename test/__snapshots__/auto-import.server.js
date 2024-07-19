@@ -1,11 +1,10 @@
 
-var _nuxt_worker_bob;
-async function bob (...args) {
-
-  const { bob: fn } = await import("somefile.ts")
-
+export async function foo (...args) {
+  const { foo: fn } = await import("somefile.ts")
   return fn(...args)
-
 }
 
-export { bob }
+export async function bar (...args) {
+  const { bar: fn } = await import("somefile.ts")
+  return fn(...args)
+}

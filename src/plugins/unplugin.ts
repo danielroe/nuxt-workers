@@ -83,14 +83,14 @@ export const WorkerPlugin = (opts: WorkerPluginOptions) => createUnplugin(() => 
       let source = ''
       if (opts.mode === 'client') {
         source += `
-const counts = {}
 const map = {}
+let count = 0
+let _nuxt_worker
 
-function initWorker (worker, name) {
-  map[name] = {}
-  counts[name] = 0
+function initWorker (worker) {
+  const worker = new Worker(new URL(${JSON.stringify(file)}, import.meta.url))
   worker.onmessage = (e) => {
-    const [resolve, reject] = map[name][e.data.id]
+    const [resolve, reject] = map[e.data.id]
     if ('error' in e.data) {
       reject(new Error(e.data.error))
     } else {
@@ -98,30 +98,27 @@ function initWorker (worker, name) {
     }
   }
   return worker
-}`
+}
+`
       }
 
       for (const name of exports) {
-        source += `\nvar _nuxt_worker_${name};`
-
-        source += `\nasync function ${name} (...args) {\n`
+        source += `\nexport async function ${name} (...args) {`
         if (opts.mode === 'server') {
-          source += `\n  const { ${name}: fn } = await import(${JSON.stringify(opts.context.workerExports[name])})\n`
-          source += `\n  return fn(...args)\n`
+          source += `\n  const { ${name}: fn } = await import(${JSON.stringify(opts.context.workerExports[name])})`
+          source += `\n  return fn(...args)`
         }
         else {
-          source += `\n  _nuxt_worker_${name} ||= initWorker(new Worker(new URL(${JSON.stringify(opts.context.workerExports[name])}, import.meta.url)), ${JSON.stringify(name)})\n`
-          source += `\n  const id = counts[${JSON.stringify(name)}]++`
+          source += `\n  _nuxt_worker ||= initWorker()\n`
+          source += `\n  const id = count++`
           source += `\n  return new Promise((resolve, reject) => {`
-          source += `\n    map[${JSON.stringify(name)}][id] = [resolve, reject]`,
-          source += `\n    _nuxt_worker_${name}.postMessage({ name: ${JSON.stringify(name)}, args, id })`
+          source += `\n    map[id] = [resolve, reject]`,
+          source += `\n    _nuxt_worker.postMessage({ name: ${JSON.stringify(name)}, args, id })`
           source += `\n  })`
         }
 
         source += `\n}\n`
       }
-
-      source += `\nexport { ${exports.join(', ')} }\n`
 
       return {
         code: source,
