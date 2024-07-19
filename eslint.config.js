@@ -11,4 +11,6 @@ export default createConfigForNuxt({
       './playground',
     ],
   },
+}).prepend({
+  ignores: ['test/__snapshots__/**'],
 })
