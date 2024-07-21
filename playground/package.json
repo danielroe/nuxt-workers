@@ -8,7 +8,7 @@
     "generate": "nuxi generate"
   },
   "devDependencies": {
-    "nuxt": "3.12.3",
+    "nuxt": "3.12.4",
     "nuxt-workers": "latest"
   }
 }
