@@ -3,7 +3,7 @@ const map = {}
 let count = 0
 let _nuxt_worker
 
-function initWorker (worker) {
+function initWorker () {
   const worker = new Worker(new URL("somefile.ts", import.meta.url))
   worker.onmessage = (e) => {
     const [resolve, reject] = map[e.data.id]
