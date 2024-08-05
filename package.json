@@ -54,7 +54,7 @@
     "unplugin": "^1.11.0"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "0.3.13",
+    "@nuxt/eslint-config": "0.5.0",
     "@nuxt/module-builder": "0.8.1",
     "@nuxt/schema": "3.12.4",
     "@nuxt/test-utils": "3.13.1",
