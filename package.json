@@ -57,7 +57,7 @@
     "@nuxt/eslint-config": "0.3.13",
     "@nuxt/module-builder": "0.8.1",
     "@nuxt/schema": "3.12.4",
-    "@nuxt/test-utils": "3.13.1",
+    "@nuxt/test-utils": "3.14.0",
     "@vitest/coverage-v8": "2.0.3",
     "@vue/test-utils": "2.4.6",
     "bumpp": "9.4.1",
@@ -72,7 +72,7 @@
     "vite": "5.3.5",
     "vitest": "2.0.3",
     "vitest-environment-nuxt": "1.0.0",
-    "vue": "3.4.33"
+    "vue": "3.4.37"
   },
   "resolutions": {
     "@nuxt/kit": "3.12.4",
