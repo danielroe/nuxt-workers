@@ -62,7 +62,7 @@
     "@vue/test-utils": "2.4.6",
     "bumpp": "9.4.1",
     "eslint": "9.9.0",
-    "happy-dom": "14.12.3",
+    "happy-dom": "15.7.4",
     "lint-staged": "15.2.10",
     "nuxt": "3.12.4",
     "playwright": "1.45.3",
