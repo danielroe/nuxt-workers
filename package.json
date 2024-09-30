@@ -69,7 +69,7 @@
     "rollup": "4.19.1",
     "simple-git-hooks": "2.11.1",
     "typescript": "5.5.4",
-    "vite": "5.4.7",
+    "vite": "5.4.8",
     "vitest": "2.1.1",
     "vitest-environment-nuxt": "1.0.1",
     "vue": "3.4.33"
