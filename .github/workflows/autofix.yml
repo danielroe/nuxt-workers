@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - renovate/*
 
 permissions:
   contents: read
