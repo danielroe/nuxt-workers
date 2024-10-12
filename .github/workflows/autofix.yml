@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - renovate/*
+      - renovate/*
 
 permissions:
   contents: read
