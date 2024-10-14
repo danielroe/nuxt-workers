@@ -42,7 +42,7 @@
     "prepack": "pnpm build",
     "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && pnpm publish",
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "test:types": "tsc --noEmit"
   },
   "dependencies": {
