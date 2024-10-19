@@ -112,7 +112,7 @@ function initWorker () {
           source += `\n  _nuxt_worker ||= initWorker()\n`
           source += `\n  const id = count++`
           source += `\n  return new Promise((resolve, reject) => {`
-          source += `\n    map[id] = [resolve, reject]`,
+          source += `\n    map[id] = [resolve, reject]`
           source += `\n    _nuxt_worker.postMessage({ name: ${JSON.stringify(name)}, args, id })`
           source += `\n  })`
         }
