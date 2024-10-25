@@ -88,7 +88,7 @@ let count = 0
 let _nuxt_worker
 
 function initWorker () {
-  const worker = new Worker(new URL(${JSON.stringify(file)}, import.meta.url))
+  const worker = new Worker(new URL(${JSON.stringify(file)}, import.meta.url), { type: 'module' })
   worker.onmessage = (e) => {
     const [resolve, reject] = map[e.data.id]
     if ('error' in e.data) {
