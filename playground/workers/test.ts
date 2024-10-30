@@ -1,3 +1,8 @@
+import { isSameMinute } from 'date-fns'
+
 export function hi() {
-  return 'Hello from worker!'
+  const date = new Date()
+  if (isSameMinute(date, date)) {
+    return 'Hello from worker!'
+  }
 }
