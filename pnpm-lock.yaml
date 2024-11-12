@@ -21,7 +21,7 @@ importers:
         version: 0.30.12
       mlly:
         specifier: ^1.7.2
-        version: 1.7.2
+        version: 1.7.3
       pathe:
         specifier: ^1.1.2
         version: 1.1.2
@@ -2964,6 +2964,9 @@ packages:
   mlly@1.7.2:
     resolution: {integrity: sha512-tN3dvVHYVz4DhSXinXIk7u9syPYaJvio118uomkovAtWBT+RdbP6Lfh/5Lvo519YMmwBafwlh20IPTXIStscpA==}
 
+  mlly@1.7.3:
+    resolution: {integrity: sha512-xUsx5n/mN0uQf4V548PKQ+YShA4/IW0KI1dZhrNrPCLG+xizETbHTkOa1f8/xut9JRPp8kQuMnz0oqwkTiLo/A==}
+
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -5081,7 +5084,7 @@ snapshots:
       jiti: 2.4.0
       klona: 2.0.6
       knitwork: 1.1.0
-      mlly: 1.7.2
+      mlly: 1.7.3
       pathe: 1.1.2
       pkg-types: 1.2.1
       scule: 1.3.0
@@ -5103,7 +5106,7 @@ snapshots:
       consola: 3.2.3
       defu: 6.1.4
       magic-regexp: 0.8.0
-      mlly: 1.7.2
+      mlly: 1.7.3
       nuxi: 3.15.0
       pathe: 1.1.2
       pkg-types: 1.2.1
@@ -6089,7 +6092,7 @@ snapshots:
       dotenv: 16.4.5
       giget: 1.2.3
       jiti: 1.21.6
-      mlly: 1.7.2
+      mlly: 1.7.3
       ohash: 1.1.4
       pathe: 1.1.2
       perfect-debounce: 1.0.0
@@ -7374,7 +7377,7 @@ snapshots:
 
   local-pkg@0.5.0:
     dependencies:
-      mlly: 1.7.2
+      mlly: 1.7.3
       pkg-types: 1.2.1
 
   locate-path@5.0.0:
@@ -7419,7 +7422,7 @@ snapshots:
     dependencies:
       estree-walker: 3.0.3
       magic-string: 0.30.12
-      mlly: 1.7.2
+      mlly: 1.7.3
       regexp-tree: 0.1.27
       type-level-regexp: 0.1.17
       ufo: 1.5.4
@@ -7515,7 +7518,7 @@ snapshots:
       defu: 6.1.4
       esbuild: 0.24.0
       jiti: 1.21.6
-      mlly: 1.7.2
+      mlly: 1.7.3
       pathe: 1.1.2
       pkg-types: 1.2.1
       postcss: 8.4.48
@@ -7526,6 +7529,13 @@ snapshots:
       typescript: 5.6.3
 
   mlly@1.7.2:
+    dependencies:
+      acorn: 8.14.0
+      pathe: 1.1.2
+      pkg-types: 1.2.1
+      ufo: 1.5.4
+
+  mlly@1.7.3:
     dependencies:
       acorn: 8.14.0
       pathe: 1.1.2
@@ -8692,7 +8702,7 @@ snapshots:
       jiti: 1.21.6
       magic-string: 0.30.12
       mkdist: 1.6.0(typescript@5.6.3)
-      mlly: 1.7.2
+      mlly: 1.7.3
       pathe: 1.1.2
       pkg-types: 1.2.1
       pretty-bytes: 6.1.1
