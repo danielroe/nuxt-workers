@@ -54,7 +54,7 @@
     "unplugin": "^1.15.0"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "0.7.0",
+    "@nuxt/eslint-config": "0.7.1",
     "@nuxt/module-builder": "0.8.4",
     "@nuxt/schema": "3.14.159",
     "@nuxt/test-utils": "3.14.4",
@@ -65,8 +65,8 @@
     "happy-dom": "15.11.6",
     "lint-staged": "15.2.10",
     "nuxt": "3.14.159",
-    "playwright": "1.48.2",
-    "rollup": "4.27.2",
+    "playwright": "1.49.0",
+    "rollup": "4.27.3",
     "simple-git-hooks": "2.11.1",
     "typescript": "5.6.3",
     "vite": "5.4.11",
