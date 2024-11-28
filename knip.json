@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "ignore": [
+    "**/__snapshots__/*"
+  ],
+  "workspaces": {
+    ".": {
+      "entry": [
+        "src/module.ts",
+        "src/runtime/**/*.{js,ts,mjs,vue}"
+      ]
+    },
+    "playground": {
+      "ignoreDependencies": ["nuxt-workers"],
+      "entry": [
+        "workers/*.ts"
+      ]
+    }
+  }
+}

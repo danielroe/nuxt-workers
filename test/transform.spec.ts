@@ -10,18 +10,18 @@ describe('worker transform', () => {
   })
   it('should transform code on the client', async () => {
     const code = await transform('client', workerSource)
-    expect(code).toMatchFileSnapshot('__snapshots__/worker.client.js')
+    await expect(code).toMatchFileSnapshot('__snapshots__/worker.client.js')
   })
 })
 
 describe('worker loader', () => {
   it('should load worker on server', async () => {
     const code = await load('server')
-    expect(code).toMatchFileSnapshot('__snapshots__/auto-import.server.js')
+    await expect(code).toMatchFileSnapshot('__snapshots__/auto-import.server.js')
   })
   it('should load worker on client', async () => {
     const code = await load('client')
-    expect(code).toMatchFileSnapshot('__snapshots__/auto-import.client.js')
+    await expect(code).toMatchFileSnapshot('__snapshots__/auto-import.client.js')
   })
 })
 

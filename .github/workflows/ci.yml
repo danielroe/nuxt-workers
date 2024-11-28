@@ -28,7 +28,10 @@ jobs:
         run: pnpm dev:prepare
 
       - name: 🔠 Lint project
-        run: pnpm run lint
+        run: pnpm lint
+
+      - name: ✂️ Knip project
+        run: pnpm knip
 
   test:
     strategy:
