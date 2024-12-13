@@ -63,7 +63,7 @@
     "changelogithub": "0.13.11",
     "eslint": "9.16.0",
     "happy-dom": "15.11.7",
-    "knip": "5.39.4",
+    "knip": "5.40.0",
     "lint-staged": "15.2.11",
     "nuxt": "3.14.1592",
     "playwright": "1.49.1",
