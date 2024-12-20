@@ -64,7 +64,7 @@
     "lint-staged": "15.2.11",
     "nuxt": "3.14.1592",
     "playwright": "1.49.1",
-    "rollup": "4.28.1",
+    "rollup": "4.29.0",
     "simple-git-hooks": "2.11.1",
     "typescript": "5.6.3",
     "vitest": "2.1.8",
