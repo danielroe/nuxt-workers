@@ -53,7 +53,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "0.7.4",
     "@nuxt/module-builder": "1.0.0-alpha.0",
-    "@nuxt/test-utils": "3.14.4",
+    "@nuxt/test-utils": "3.15.1",
     "@vitest/coverage-v8": "2.1.8",
     "@vue/test-utils": "2.4.6",
     "bumpp": "9.9.2",
@@ -62,7 +62,7 @@
     "happy-dom": "15.11.7",
     "knip": "5.41.1",
     "lint-staged": "15.2.11",
-    "nuxt": "3.14.1592",
+    "nuxt": "3.15.0",
     "playwright": "1.49.1",
     "rollup": "4.29.1",
     "simple-git-hooks": "2.11.1",
@@ -71,8 +71,8 @@
     "vue": "3.5.13"
   },
   "resolutions": {
-    "@nuxt/kit": "3.14.1592",
-    "@nuxt/schema": "3.14.1592",
+    "@nuxt/kit": "3.15.0",
+    "@nuxt/schema": "3.15.0",
     "nuxt-workers": "link:."
   },
   "simple-git-hooks": {
