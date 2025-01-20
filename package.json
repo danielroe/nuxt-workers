@@ -57,7 +57,7 @@
     "@vitest/coverage-v8": "2.1.8",
     "@vue/test-utils": "2.4.6",
     "bumpp": "9.9.2",
-    "changelogithub": "0.13.11",
+    "changelogithub": "13.12.1",
     "eslint": "9.18.0",
     "happy-dom": "16.5.3",
     "knip": "5.41.1",
