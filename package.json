@@ -51,7 +51,7 @@
     "unplugin": "^2.0.0"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "0.7.4",
+    "@nuxt/eslint-config": "0.7.6",
     "@nuxt/module-builder": "1.0.0-alpha.0",
     "@nuxt/test-utils": "3.14.4",
     "@vitest/coverage-v8": "3.0.4",
@@ -60,13 +60,13 @@
     "changelogithub": "13.12.1",
     "eslint": "9.19.0",
     "happy-dom": "16.7.3",
-    "knip": "5.41.1",
-    "lint-staged": "15.2.11",
+    "knip": "5.43.6",
+    "lint-staged": "15.4.3",
     "nuxt": "3.14.1592",
-    "playwright": "1.49.1",
-    "rollup": "4.29.1",
+    "playwright": "1.50.1",
+    "rollup": "4.32.1",
     "simple-git-hooks": "2.11.1",
-    "typescript": "5.6.3",
+    "typescript": "5.7.3",
     "vitest": "3.0.4",
     "vue": "3.5.13"
   },
@@ -83,5 +83,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@9.15.1"
+  "packageManager": "pnpm@9.15.4"
 }
