@@ -35,8 +35,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     const dirs = [..._dirs]
 
-    console.log({ dirs })
-
     const context = {
       workerExports: Object.create(null) as Record<string, string>,
       reverseMap: Object.create(null) as Record<string, string[]>,
