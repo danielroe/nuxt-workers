@@ -83,9 +83,6 @@ importers:
       vitest:
         specifier: 3.0.5
         version: 3.0.5(@types/node@22.10.5)(happy-dom@17.1.0)(terser@5.37.0)
-      vue:
-        specifier: 3.5.13
-        version: 3.5.13(typescript@5.7.3)
 
   playground:
     dependencies:
