@@ -13,7 +13,9 @@
     "playground": {
       "ignoreDependencies": ["nuxt-workers"],
       "entry": [
-        "workers/*.ts"
+        "workers/*.ts",
+        "layers/test/nuxt.config.ts",
+        "layers/test/workers/*.ts"
       ]
     }
   }
