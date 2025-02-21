@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const message = await hi()
+const layerMessage = await fromLayer()
 
 const clientSideMessage = ref('')
 async function loadClientSideMessage() {
@@ -10,6 +11,8 @@ async function loadClientSideMessage() {
 <template>
   <div>
     {{ message }}
+    <br>
+    {{ layerMessage }}
     <br>
     <div>
       {{ clientSideMessage }}

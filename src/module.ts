@@ -21,15 +21,21 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxt-workers',
   },
   defaults: {
-    dir: '~/workers',
+    dir: 'workers',
   },
   async setup(options, nuxt) {
     const scanPattern = nuxt.options.extensions.map(e => `*${e}`)
 
-    const dirs: string[] = []
+    const _dirs = new Set<string>()
     for (const dir of Array.isArray(options.dir) ? options.dir : [options.dir]) {
-      dirs.push(resolve(nuxt.options.srcDir, resolveAlias(dir, nuxt.options.alias)))
+      for (const layer of nuxt.options._layers) {
+        _dirs.add(resolve(layer.config.srcDir || layer.cwd, resolveAlias(dir, nuxt.options.alias)))
+      }
     }
+
+    const dirs = [..._dirs]
+
+    console.log({ dirs })
 
     const context = {
       workerExports: Object.create(null) as Record<string, string>,

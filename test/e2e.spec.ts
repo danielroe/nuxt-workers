@@ -10,7 +10,9 @@ await setup({
 
 describe('nuxt-workers', () => {
   it('should work on the server', async () => {
-    expect(await $fetch('/')).toContain('Hello from worker!')
+    const html = await $fetch('/')
+    expect(html).toContain('Hello from worker!')
+    expect(html).toContain('Hello from layer worker!')
   })
 
   it('should work on the client', async () => {
