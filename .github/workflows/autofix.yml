@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - main
-      - renovate/*
-      - renovate/*
 
 permissions:
   contents: read
@@ -24,6 +22,10 @@ jobs:
 
       - name: 📦 Install dependencies
         run: pnpm install
+
+      - name: Install Playwright
+        # does not need to explicitly set chromium after https://github.com/microsoft/playwright/issues/14862 is solved
+        run: pnpm playwright install chromium
 
       - name: 🚧 Set up project
         run: pnpm dev:prepare
