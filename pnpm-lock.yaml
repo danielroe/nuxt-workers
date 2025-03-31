@@ -60,8 +60,8 @@ importers:
         specifier: 17.4.4
         version: 17.4.4
       knip:
-        specifier: 5.46.3
-        version: 5.46.3(@types/node@22.13.14)(typescript@5.8.2)
+        specifier: 5.46.4
+        version: 5.46.4(@types/node@22.13.14)(typescript@5.8.2)
       lint-staged:
         specifier: 15.5.0
         version: 15.5.0
@@ -2752,8 +2752,8 @@ packages:
     resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
     engines: {node: '>= 8'}
 
-  knip@5.46.3:
-    resolution: {integrity: sha512-DpxZYvFDh0POjgnfXie39zd4SCxmw3iQTSLPgnf1Umq+k+sCHjcv553UmI3hfo39qlVIq2c8XSsjS3IeZfdAoA==}
+  knip@5.46.4:
+    resolution: {integrity: sha512-iU2VGdXOPOj6Y8jEeixYMjlf2MCLZNjB63u2pfuP14gprRFjxgF+8wZiCgrjvogWt9H2WT+ytLYouXoEFAcm5g==}
     engines: {node: '>=18.18.0'}
     hasBin: true
     peerDependencies:
@@ -7240,7 +7240,7 @@ snapshots:
 
   klona@2.0.6: {}
 
-  knip@5.46.3(@types/node@22.13.14)(typescript@5.8.2):
+  knip@5.46.4(@types/node@22.13.14)(typescript@5.8.2):
     dependencies:
       '@nodelib/fs.walk': 3.0.1
       '@snyk/github-codeowners': 1.1.0
