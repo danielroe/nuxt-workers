@@ -60,11 +60,11 @@
     "changelogithub": "13.16.0",
     "eslint": "9.29.0",
     "happy-dom": "18.0.1",
-    "knip": "5.61.2",
+    "knip": "5.61.3",
     "lint-staged": "16.1.2",
     "nuxt": "3.17.3",
     "playwright": "1.53.1",
-    "rollup": "4.44.0",
+    "rollup": "4.44.1",
     "simple-git-hooks": "2.13.0",
     "typescript": "5.8.3",
     "vitest": "3.2.4"
@@ -82,5 +82,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.12.2"
+  "packageManager": "pnpm@10.12.4"
 }
