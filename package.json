@@ -63,8 +63,8 @@
     "knip": "5.61.3",
     "lint-staged": "16.1.2",
     "nuxt": "3.17.6",
-    "playwright": "1.53.2",
-    "rollup": "4.44.2",
+    "playwright": "1.54.1",
+    "rollup": "4.45.0",
     "simple-git-hooks": "2.13.0",
     "typescript": "5.8.3",
     "vitest": "3.2.4"
@@ -82,5 +82,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.12.4"
+  "packageManager": "pnpm@10.13.1"
 }
