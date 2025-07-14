@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "nuxt": "3.17.6",
+    "nuxt": "3.17.7",
     "nuxt-workers": "latest"
   }
 }
