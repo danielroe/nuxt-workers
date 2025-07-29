@@ -62,7 +62,7 @@
     "happy-dom": "18.0.1",
     "knip": "5.61.3",
     "lint-staged": "16.1.2",
-    "nuxt": "3.17.7",
+    "nuxt": "3.18.0",
     "playwright": "1.54.1",
     "rollup": "4.45.0",
     "simple-git-hooks": "2.13.0",
@@ -70,8 +70,8 @@
     "vitest": "3.2.4"
   },
   "resolutions": {
-    "@nuxt/kit": "3.17.7",
-    "@nuxt/schema": "3.17.7",
+    "@nuxt/kit": "3.18.0",
+    "@nuxt/schema": "3.18.0",
     "nuxt-workers": "link:."
   },
   "simple-git-hooks": {
