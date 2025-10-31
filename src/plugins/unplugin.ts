@@ -38,7 +38,7 @@ export const WorkerTransformPlugin = (opts: WorkerPluginOptions) => createUnplug
       const exports = opts.context.reverseMap[id]
       s.append([
         '',
-        `const __worker_exports__ = { ${exports.map(e => `${e}: ${e}`).join(', ')} }`,
+        `const __worker_exports__ = { ${exports!.map(e => `${e}: ${e}`).join(', ')} }`,
         `self.onmessage = async (e) => {`,
         `  const { name, args, id } = e.data`,
         `  const fn = __worker_exports__[name]`,
