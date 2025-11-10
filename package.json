@@ -82,5 +82,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.21.0"
 }
