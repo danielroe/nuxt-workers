@@ -24,7 +24,7 @@ export const WorkerTransformPlugin = (opts: WorkerPluginOptions) => createUnplug
       }
 
       const id = _id.replace(/\?.+$/, '')
-      if (!(id in opts.context.reverseMap)) {
+      if (!opts.context.reverseMap[id]) {
         return
       }
 
