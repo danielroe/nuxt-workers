@@ -48,7 +48,7 @@
     "mlly": "^1.7.4",
     "pathe": "^2.0.3",
     "ufo": "^1.5.4",
-    "unplugin": "^2.2.0"
+    "unplugin": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "1.5.2",
