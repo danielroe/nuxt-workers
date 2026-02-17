@@ -61,7 +61,7 @@
     "eslint": "9.39.2",
     "happy-dom": "20.6.1",
     "knip": "5.61.3",
-    "lint-staged": "16.1.2",
+    "nano-staged": "^0.9.0",
     "nuxt": "4.1.1",
     "playwright": "1.54.1",
     "rollup": "4.45.0",
@@ -75,12 +75,12 @@
     "nuxt-workers": "link:."
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "npx nano-staged"
   },
-  "lint-staged": {
+  "packageManager": "pnpm@10.21.0",
+  "nano-staged": {
     "*.{js,ts,mjs,cjs,json,.*rc}": [
       "npx eslint --fix"
     ]
-  },
-  "packageManager": "pnpm@10.21.0"
+  }
 }
