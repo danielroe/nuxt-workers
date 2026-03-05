@@ -85,9 +85,9 @@ Published under the [MIT License](./LICENCE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-workers?style=flat-square
-[npm-version-href]: https://npmjs.com/package/nuxt-workers
-[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-workers?style=flat-square
+[npm-version-src]: https://npmx.dev/api/registry/badge/version/nuxt-workers
+[npm-version-href]: https://npmx.dev/package/nuxt-workers
+[npm-downloads-src]: https://npmx.dev/api/registry/badge/downloads/nuxt-workers
 [npm-downloads-href]: https://npm.chart.dev/nuxt-workers
 [github-actions-src]: https://img.shields.io/github/actions/workflow/status/danielroe/nuxt-workers/ci.yml?branch=main
 [github-actions-href]: https://github.com/danielroe/nuxt-workers/actions?query=workflow%3Aci
