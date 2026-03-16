@@ -56,7 +56,7 @@
     "@nuxt/test-utils": "4.0.0",
     "@vitest/coverage-v8": "4.1.0",
     "@vue/test-utils": "2.4.6",
-    "bumpp": "10.2.0",
+    "bumpp": "11.0.1",
     "changelogithub": "14.0.0",
     "eslint": "9.39.4",
     "happy-dom": "20.8.4",
