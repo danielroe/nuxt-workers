@@ -54,12 +54,12 @@
     "@nuxt/eslint-config": "1.5.2",
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/test-utils": "4.0.0",
-    "@vitest/coverage-v8": "4.0.18",
+    "@vitest/coverage-v8": "4.1.0",
     "@vue/test-utils": "2.4.6",
     "bumpp": "10.2.0",
     "changelogithub": "14.0.0",
     "eslint": "9.39.4",
-    "happy-dom": "20.8.3",
+    "happy-dom": "20.8.4",
     "knip": "5.61.3",
     "nano-staged": "0.9.0",
     "nuxt": "4.1.1",
@@ -67,7 +67,7 @@
     "rollup": "4.45.0",
     "simple-git-hooks": "2.13.0",
     "typescript": "5.8.3",
-    "vitest": "4.0.18"
+    "vitest": "4.1.0"
   },
   "resolutions": {
     "@nuxt/kit": "^4.0.0",
