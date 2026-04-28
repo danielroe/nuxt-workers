@@ -69,11 +69,6 @@
     "typescript": "6.0.2",
     "vitest": "4.1.4"
   },
-  "resolutions": {
-    "@nuxt/kit": "^4.0.0",
-    "@nuxt/schema": "4.1.1",
-    "nuxt-workers": "link:."
-  },
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
   },

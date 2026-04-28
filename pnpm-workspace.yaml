@@ -1,3 +1,8 @@
 packages:
   - "playground"
 
+
+overrides:
+  "@nuxt/kit": "^4.0.0"
+  "@nuxt/schema": "4.1.1"
+  nuxt-workers: "link:."
