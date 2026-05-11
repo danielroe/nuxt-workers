@@ -54,7 +54,7 @@
     "@nuxt/eslint-config": "1.5.2",
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/test-utils": "4.0.0",
-    "@vitest/coverage-v8": "4.1.5",
+    "@vitest/coverage-v8": "4.1.6",
     "@vue/test-utils": "2.4.6",
     "bumpp": "11.0.1",
     "changelogithub": "14.0.0",
@@ -67,7 +67,7 @@
     "rollup": "4.45.0",
     "simple-git-hooks": "2.13.0",
     "typescript": "6.0.2",
-    "vitest": "4.1.5"
+    "vitest": "4.1.6"
   },
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
