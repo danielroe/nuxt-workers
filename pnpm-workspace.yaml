@@ -1,6 +1,10 @@
 packages:
   - "playground"
 
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: false
+  simple-git-hooks: false
 
 overrides:
   "@nuxt/kit": "^4.0.0"
