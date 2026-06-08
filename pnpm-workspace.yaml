@@ -5,6 +5,7 @@ allowBuilds:
   '@parcel/watcher': false
   esbuild: false
   simple-git-hooks: false
+  unrs-resolver: false
 
 overrides:
   "@nuxt/kit": "^4.0.0"

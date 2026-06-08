@@ -7,14 +7,14 @@
     ".": {
       "entry": [
         "src/module.ts",
-        "src/runtime/**/*.{js,ts,mjs,vue}"
+      ],
+      "ignoreDependencies": [
+        "vitest-environment-nuxt"
       ]
     },
     "playground": {
-      "ignoreDependencies": ["nuxt-workers"],
       "entry": [
         "workers/*.ts",
-        "layers/test/nuxt.config.ts",
         "layers/test/workers/*.ts"
       ]
     }
