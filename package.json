@@ -50,7 +50,7 @@
     "unplugin": "^3.0.0"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "1.15.2",
+    "@nuxt/eslint-config": "1.16.0",
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/test-utils": "4.0.0",
     "@vitest/coverage-v8": "4.1.8",
@@ -61,7 +61,7 @@
     "nano-staged": "1.0.2",
     "nuxt": "4.1.1",
     "playwright": "1.60.0",
-    "rollup": "4.61.1",
+    "rollup": "4.62.0",
     "simple-git-hooks": "2.13.1",
     "typescript": "6.0.3",
     "vitest": "4.1.8"
@@ -69,7 +69,7 @@
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
   },
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@11.6.0",
   "nano-staged": {
     "*.{js,ts,mjs,cjs,json,.*rc}": [
       "npx eslint --fix"
