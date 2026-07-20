@@ -63,7 +63,7 @@
     "playwright": "1.61.1",
     "rollup": "4.62.2",
     "simple-git-hooks": "2.13.1",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
   "simple-git-hooks": {
