@@ -60,8 +60,8 @@
     "knip": "6.29.0",
     "nano-staged": "1.0.2",
     "nuxt": "4.1.1",
-    "playwright": "1.61.1",
-    "rollup": "4.62.2",
+    "playwright": "1.62.0",
+    "rollup": "4.62.3",
     "simple-git-hooks": "2.13.1",
     "typescript": "6.0.3",
     "vitest": "4.1.10"
@@ -69,7 +69,7 @@
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
   },
-  "packageManager": "pnpm@11.15.1",
+  "packageManager": "pnpm@11.18.0",
   "nano-staged": {
     "*.{js,ts,mjs,cjs,json,.*rc}": [
       "npx eslint --fix"
