@@ -1,2 +1,2 @@
 modules.0="@nuxt/test-utils/module"
-setups.@nuxt/test-utils="4.0.0"
+setups.@nuxt/test-utils="4.1.0"
