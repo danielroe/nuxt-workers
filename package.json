@@ -50,7 +50,7 @@
     "unplugin": "^3.0.0"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "1.16.0",
+    "@nuxt/eslint-config": "1.17.0",
     "@nuxt/module-builder": "1.0.3",
     "@nuxt/test-utils": "4.1.0",
     "@vitest/coverage-v8": "4.1.10",
@@ -69,7 +69,7 @@
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
   },
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.21.0",
   "nano-staged": {
     "*.{js,ts,mjs,cjs,json,.*rc}": [
       "npx eslint --fix"
