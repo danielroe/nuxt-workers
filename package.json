@@ -53,10 +53,10 @@
     "@nuxt/eslint-config": "1.17.0",
     "@nuxt/module-builder": "1.0.3",
     "@nuxt/test-utils": "4.1.0",
-    "@vitest/coverage-v8": "4.1.10",
+    "@vitest/coverage-v8": "4.1.11",
     "@vue/test-utils": "2.4.11",
     "eslint": "10.8.1",
-    "happy-dom": "20.11.2",
+    "happy-dom": "20.11.6",
     "knip": "6.32.2",
     "nano-staged": "1.0.2",
     "nuxt": "4.5.2",
@@ -64,7 +64,7 @@
     "rollup": "4.62.5",
     "simple-git-hooks": "2.13.1",
     "typescript": "6.0.3",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   },
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
