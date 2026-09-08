@@ -10,4 +10,4 @@ allowBuilds:
 overrides:
   "@nuxt/kit": "^4.0.0"
   "@nuxt/schema": "4.5.2"
-  nuxt-workers: "link:."
+  nuxt-workers: "workspace:*"
