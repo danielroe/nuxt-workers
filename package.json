@@ -61,7 +61,7 @@
     "nano-staged": "1.0.2",
     "nuxt": "4.5.2",
     "playwright": "1.63.0",
-    "rollup": "4.63.1",
+    "rollup": "4.63.2",
     "simple-git-hooks": "2.14.0",
     "typescript": "6.0.3",
     "vitest": "5.0.0"
