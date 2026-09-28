@@ -57,7 +57,7 @@
     "@vue/test-utils": "2.5.1",
     "eslint": "10.11.0",
     "happy-dom": "20.14.5",
-    "knip": "6.37.0",
+    "knip": "6.38.0",
     "nano-staged": "1.0.2",
     "nuxt": "4.5.2",
     "playwright": "1.63.0",
