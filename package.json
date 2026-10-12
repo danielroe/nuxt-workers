@@ -57,7 +57,7 @@
     "@vitest/coverage-v8": "5.0.3",
     "@vue/test-utils": "2.5.1",
     "eslint": "10.12.0",
-    "happy-dom": "20.14.5",
+    "happy-dom": "20.14.6",
     "knip": "6.41.0",
     "nano-staged": "1.0.2",
     "nuxt": "4.6.1",
