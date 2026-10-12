@@ -1,9 +1,8 @@
 import { readFileSync } from 'node:fs'
-import { defineNuxtModule, resolveFiles, updateTemplates, resolveAlias, addBuildPlugin } from '@nuxt/kit'
+import { defineNuxtModule, resolveFiles, updateTemplates, resolveAlias, addBuildPlugin, addVitePlugin } from '@nuxt/kit'
 import { findExportNames } from 'mlly'
 import { join, relative, resolve } from 'pathe'
 import { withQuery } from 'ufo'
-import type { InputPluginOption } from 'rollup'
 
 import { VIRTUAL_ID, WorkerPlugin, WorkerTransformPlugin } from './plugins/unplugin'
 
@@ -56,11 +55,13 @@ export default defineNuxtModule<ModuleOptions>({
       addBuildPlugin(transformPlugin, { server: false })
     }
     else {
-      nuxt.hook('vite:extendConfig', (config, { isClient }) => {
-        if (isClient) {
-          const plugins = (config.build!.rollupOptions!.plugins ||= []) as InputPluginOption[]
-          plugins.push(transformPlugin.rollup())
-        }
+      addVitePlugin({
+        name: 'nuxt-workers:worker-plugins',
+        config(config) {
+          const workerPlugins = config.worker?.plugins
+          config.worker ||= {}
+          config.worker.plugins = () => [...(workerPlugins?.() || []), transformPlugin.vite()]
+        },
       })
     }
 
