@@ -1,5 +1,6 @@
 packages:
   - "playground"
+  - "playground-v5"
 
 allowBuilds:
   '@parcel/watcher': false
@@ -7,7 +8,11 @@ allowBuilds:
   simple-git-hooks: false
   unrs-resolver: false
 
+minimumReleaseAgeExclude:
+  - '@nuxt/*'
+  - nuxt-nightly
+
 overrides:
-  "@nuxt/kit": "^4.0.0"
-  "@nuxt/schema": "4.6.1"
+  "@nuxt/kit@<5": "^4.6.0"
+  "@nuxt/schema@<5": "4.6.1"
   nuxt-workers: "workspace:*"

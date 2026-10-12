@@ -31,8 +31,9 @@
   "scripts": {
     "build": "pnpm dev:prepare && nuxt-module-build build",
     "dev": "nuxt dev playground",
+    "dev:v5": "pnpm -C playground-v5 exec nuxt dev",
     "dev:build": "nuxt build playground",
-    "dev:prepare": "simple-git-hooks && pnpm nuxt-module-build build --stub && pnpm nuxt-module-build prepare && nuxt prepare playground",
+    "dev:prepare": "simple-git-hooks && pnpm nuxt-module-build build --stub && pnpm nuxt-module-build prepare && nuxt prepare playground && pnpm -C playground-v5 exec nuxt prepare",
     "docs:dev": "nuxt dev docs",
     "docs:build": "nuxt generate docs",
     "lint": "eslint .",
@@ -42,7 +43,7 @@
     "test:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/kit": "^4.0.0",
+    "@nuxt/kit": "^4.6.0",
     "magic-string": "^1.0.0",
     "mlly": "^1.7.4",
     "pathe": "^2.0.3",

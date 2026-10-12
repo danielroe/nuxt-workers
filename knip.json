@@ -17,6 +17,12 @@
         "workers/*.ts",
         "layers/test/workers/*.ts"
       ]
+    },
+    "playground-v5": {
+      "entry": [
+        "workers/*.ts",
+        "layers/test/workers/*.ts"
+      ]
     }
   }
 }
