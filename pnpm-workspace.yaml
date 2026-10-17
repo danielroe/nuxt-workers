@@ -14,5 +14,5 @@ minimumReleaseAgeExclude:
 
 overrides:
   "@nuxt/kit@<5": "^4.6.0"
-  "@nuxt/schema@<5": "4.6.1"
+  "@nuxt/schema@<5": "4.6.2"
   nuxt-workers: "workspace:*"
