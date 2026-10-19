@@ -53,7 +53,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "1.17.0",
     "@nuxt/module-builder": "1.0.3",
-    "@nuxt/test-utils": "4.3.3",
+    "@nuxt/test-utils": "4.3.4",
     "@vitest/coverage-v8": "5.0.3",
     "@vue/test-utils": "2.5.1",
     "eslint": "10.12.0",
