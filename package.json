@@ -55,14 +55,14 @@
     "@nuxt/module-builder": "1.0.3",
     "@nuxt/test-utils": "4.3.3",
     "@vitest/coverage-v8": "5.1.0",
-    "@vue/test-utils": "2.5.1",
+    "@vue/test-utils": "2.6.0",
     "eslint": "10.15.0",
     "happy-dom": "21.0.4",
     "knip": "6.45.1",
     "nano-staged": "1.0.2",
     "nuxt": "4.6.2",
-    "playwright": "1.65.0",
-    "rollup": "4.68.1",
+    "playwright": "1.65.1",
+    "rollup": "4.68.3",
     "simple-git-hooks": "2.14.0",
     "typescript": "6.0.3",
     "vitest": "5.1.0"
@@ -78,7 +78,7 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.18.0",
+      "version": "12.21.0",
       "onFail": "download"
     }
   },
